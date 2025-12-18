@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #gifts {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +13,7 @@ body {
   margin-top: 32px;
   flex-direction: row;
 }
+
 .gift-card {
   background: #fff;
   border-radius: 18px;
@@ -26,10 +28,12 @@ body {
   transition: transform 0.15s, box-shadow 0.15s;
   position: relative;
 }
+
 .gift-card:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.12);
 }
+
 .gift-title {
   font-weight: 600;
   font-size: 1.2rem;
@@ -37,12 +41,14 @@ body {
   color: #2d2d2d;
   text-align: center;
 }
+
 .gift-price {
   font-size: 1.1rem;
   color: #4caf50;
   font-weight: 500;
   margin: 10px 0 12px 0;
 }
+
 .gift-card img {
   border-radius: 12px;
   margin-bottom: 10px;
@@ -52,6 +58,7 @@ body {
   object-fit: cover;
   background: #f0f0f0;
 }
+
 .gift-card a {
   margin-top: 10px;
   background: #4caf50;
@@ -64,10 +71,13 @@ body {
   transition: background 0.15s;
   box-shadow: 0 1px 4px rgba(76, 175, 80, 0.08);
 }
+
 .gift-card a:hover {
   background: #388e3c;
 }
-h1 {
+
+h1,
+h2 {
   text-align: center;
   margin-top: 32px;
   color: #333;
@@ -80,18 +90,22 @@ h1 {
     flex-direction: column;
     gap: 20px;
   }
+
   .gift-card {
     width: 95vw;
     min-width: unset;
     max-width: 99vw;
     padding: 16px 6px 16px 6px;
   }
+
   .gift-card img {
     width: 90vw;
     height: auto;
     max-width: 320px;
   }
-  h1 {
+  
+  h1,
+  h2 {
     font-size: 1.3rem;
   }
 }
