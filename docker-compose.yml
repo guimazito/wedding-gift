@@ -5,3 +5,4 @@ services:
     ports:
       - "8090:80"
     container_name: wedding-gift-app
+    restart: always
