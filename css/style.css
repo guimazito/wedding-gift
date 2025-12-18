@@ -1,0 +1,97 @@
+body {
+  background: #f7f7fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#gifts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+  flex-direction: row;
+}
+.gift-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 1.5px 4px rgba(0, 0, 0, 0.08);
+  border: none;
+  padding: 24px 20px 20px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: relative;
+}
+.gift-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+.gift-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+  text-align: center;
+}
+.gift-price {
+  font-size: 1.1rem;
+  color: #4caf50;
+  font-weight: 500;
+  margin: 10px 0 12px 0;
+}
+.gift-card img {
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+.gift-card a {
+  margin-top: 10px;
+  background: #4caf50;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.15s;
+  box-shadow: 0 1px 4px rgba(76, 175, 80, 0.08);
+}
+.gift-card a:hover {
+  background: #388e3c;
+}
+h1 {
+  text-align: center;
+  margin-top: 32px;
+  color: #333;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  #gifts {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gift-card {
+    width: 95vw;
+    min-width: unset;
+    max-width: 99vw;
+    padding: 16px 6px 16px 6px;
+  }
+  .gift-card img {
+    width: 90vw;
+    height: auto;
+    max-width: 320px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+}

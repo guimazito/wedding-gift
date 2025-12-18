@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Code do Presente</title>
+    <link rel="stylesheet" type="text/css" href="css/style_qrcode.css">
+  </head>
+  <body>
+    <h1>QR Code do Presente</h1>
+    <div id="qrcode-img"></div>
+    <a href="index.html" class="back-link">Voltar para a lista</a>
+    <script>
+      // Obtém o parâmetro "pix" da URL
+      const params = new URLSearchParams(window.location.search);
+      const pix = params.get("pix");
+      if (pix) {
+        const img = document.createElement('img');
+        img.src = pix;
+        img.alt = "QR Code do presente";
+        img.style.maxWidth = '100%';
+        document.getElementById("qrcode-img").appendChild(img);
+      } else {
+        document.getElementById("qrcode-img").innerText = "QR Code não encontrado.";
+      }
+    </script>
+  </body>
+</html>

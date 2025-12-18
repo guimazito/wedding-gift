@@ -1,0 +1,7 @@
+version: '3'
+services:
+  wedding-gift:
+    build: .
+    ports:
+      - "8090:80"
+    container_name: wedding-gift-app
