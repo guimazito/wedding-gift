@@ -1,17 +1,38 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   text-align: center;
-  margin-top: 40px;
+  margin: 0;
+  padding: 0;
   background: #f7f7fa;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 6px;
+  transition: background 0.2s;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 8px 18px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
 #qrcode-img {
-  margin: 20px auto;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+  flex-direction: row;
+  padding: 2%;
 }
 
 .back-link {
@@ -30,8 +51,26 @@ h1,h2 {
   letter-spacing: 1px;
 }
 
+p {
+  margin-left: 8px;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+img {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+}
+
 @media (max-width: 600px) {
   h1,h2 {
     font-size: 1.3rem;
+  }
+  #qrcode-img > div {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: center !important;
+    width: 100%;
   }
 }

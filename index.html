@@ -18,18 +18,21 @@
           price: "R$ 150,00",
           pix: "images/chave1.png",
           image: "images/faca.jpg",
+          link: "000201010310001654630014BR.GOV.BCB.PIX0136NOME@EMAIL.COM.BR5204000053039865802BR5901NOME_DO_BENEFICIARIO6001CIDADE62070503***63041111",
         },
         {
           name: "Jogo de Toalhas de Banho Rosa",
           price: "R$ 200,00",
           pix: "images/chave2.png",
           image: "images/toalha.jpg",
+          link: "000201010310001654630014BR.GOV.BCB.PIX0136NOME@EMAIL.COM.BR5204000053039865802BR5901NOME_DO_BENEFICIARIO6001CIDADE62070503***63042222",
         },
         {
           name: "Escorredor de Louça em Inox",
           price: "R$ 80,00",
           pix: "images/chave3.png",
           image: "images/escorredor.png",
+          link: "000201010310001654630014BR.GOV.BCB.PIX0136NOME@EMAIL.COM.BR5204000053039865802BR5901NOME_DO_BENEFICIARIO6001CIDADE62070503***63043333",
         },
       ];
 
@@ -43,9 +46,7 @@
           gift.name
         }" style="width:200px;height:200px;"><br>
         <div class="gift-price">${gift.price}</div>
-        <a href="qrcode.html?pix=${encodeURIComponent(
-          gift.pix
-        )}">Ver QR Code</a>
+        <a href="qrcode.html?pix=${encodeURIComponent(gift.pix)}&link=${encodeURIComponent(gift.link)}">Ver QR Code</a>
         `;
         giftsDiv.appendChild(card);
       });

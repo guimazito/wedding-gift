@@ -14,12 +14,40 @@
     <script>
       const params = new URLSearchParams(window.location.search);
       const pix = params.get("pix");
+      const linkValue = params.get("link");
       if (pix) {
+        const container = document.createElement("div");
+        container.style.display = "flex";
+        container.style.alignItems = "center";
+        container.style.justifyContent = "center";
+        container.style.gap = "32px";
+
         const img = document.createElement("img");
         img.src = pix;
         img.alt = "QR Code do presente";
-        img.style.maxWidth = "100%";
-        document.getElementById("qrcode-img").appendChild(img);
+
+        const link = document.createElement("p");
+        link.innerText = linkValue || "";
+
+        const copyBtn = document.createElement("button");
+        copyBtn.innerText = "Copiar código PIX";
+        copyBtn.onclick = function() {
+          if (linkValue) {
+            navigator.clipboard.writeText(linkValue);
+            copyBtn.innerText = "Copiado!";
+            setTimeout(() => { copyBtn.innerText = "Copiar código PIX"; }, 1500);
+          }
+        };
+
+        container.appendChild(img);
+        const linkBtnContainer = document.createElement("div");
+        linkBtnContainer.style.display = "flex";
+        linkBtnContainer.style.flexDirection = "column";
+        linkBtnContainer.style.alignItems = "center";
+        linkBtnContainer.appendChild(link);
+        linkBtnContainer.appendChild(copyBtn);
+        container.appendChild(linkBtnContainer);
+        document.getElementById("qrcode-img").appendChild(container);
       } else {
         document.getElementById("qrcode-img").innerText =
           "QR Code não encontrado.";
