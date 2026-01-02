@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>QR Code</title>
-     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>QR Code do Presente</h1>
-    <div id="qrcode-card"></div>
-    <a href="index.html" class="back-link">Voltar para a Lista</a>
+    <main style="flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+      <h1>QR Code do Presente</h1>
+      <div id="qrcode-card"></div>
+      <a href="index.html" class="back-link">Voltar para a Lista</a>
+    </main>
     <script>
       const params = new URLSearchParams(window.location.search);
       const pix = params.get("pix");
@@ -32,11 +40,13 @@
 
         const copyBtn = document.createElement("button");
         copyBtn.innerText = "Copiar Código PIX";
-        copyBtn.onclick = function() {
+        copyBtn.onclick = function () {
           if (linkValue) {
             navigator.clipboard.writeText(linkValue);
             copyBtn.innerText = "Copiado!";
-            setTimeout(() => { copyBtn.innerText = "Copiar Código PIX"; }, 1500);
+            setTimeout(() => {
+              copyBtn.innerText = "Copiar Código PIX";
+            }, 1500);
           }
         };
 
@@ -52,5 +62,14 @@
           "QR Code não encontrado.";
       }
     </script>
+    <footer>
+      Desenvolvido por Claudio Guimarães
+      <a
+        href="https://github.com/guimazito"
+        target="_blank"
+        style="color: #fff; text-decoration: underline"
+        >@guimazito</a
+      >
+    </footer>
   </body>
 </html>

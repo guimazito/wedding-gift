@@ -6,10 +6,16 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Lista de Presentes</h1>
@@ -18,26 +24,39 @@
     <script>
       const giftsDiv = document.getElementById("gifts");
       fetch("gifts.json")
-        .then(response => {
+        .then((response) => {
           if (!response.ok) throw new Error("Erro ao carregar os presentes");
           return response.json();
         })
-        .then(gifts => {
+        .then((gifts) => {
           gifts.forEach((gift, idx) => {
             const card = document.createElement("div");
             card.className = "gift-card";
             card.innerHTML = `
               <div class="gift-title">${gift.name}</div>
-              <img src="${gift.image}" alt="${gift.name}" style="width:200px;height:200px;">
+              <img src="${gift.image}" alt="${
+              gift.name
+            }" style="width:200px;height:200px;">
               <div class="gift-price">${gift.price}</div>
-              <a href="qrcode.html?pix=${encodeURIComponent(gift.pix)}&link=${encodeURIComponent(gift.link)}">QR Code</a>
+              <a href="qrcode.html?pix=${encodeURIComponent(
+                gift.pix
+              )}&link=${encodeURIComponent(gift.link)}">QR Code</a>
             `;
             giftsDiv.appendChild(card);
           });
         })
-        .catch(error => {
+        .catch((error) => {
           giftsDiv.innerText = "Erro ao carregar a lista de presentes.";
         });
     </script>
+    <footer>
+      Desenvolvido por Claudio Guimarães
+      <a
+        href="https://github.com/guimazito"
+        target="_blank"
+        style="color: #fff; text-decoration: underline"
+        >@guimazito</a
+      >
+    </footer>
   </body>
 </html>
