@@ -1,9 +1,55 @@
+/* Common */
+
+html,
 body {
-  background: #f7f7fa;
-  font-family: "Segoe UI", Arial, sans-serif;
+  background: #5b2312;
+  font-family: "Quicksand", "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 32px;
+  color: #ffffff;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.gift-card a,
+.qrcode-container button {
+  font-family: "Quicksand", "Segoe UI", Arial, sans-serif;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  background: #5b2312;
+  color: #ffffff;
+  padding: 12px 0 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1.5px 6px rgba(67, 160, 71, 0.08);
+  border: none;
+  cursor: pointer;
+  width: 70%;
+}
+
+.gift-card a:hover,
+.qrcode-container button:hover {
+  background: #805c51;
+}
+
+/* Gift Page */
 
 #gifts {
   display: flex;
@@ -15,95 +61,135 @@ body {
 }
 
 .gift-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 1.5px 4px rgba(0, 0, 0, 0.08);
+  background: #eaa995;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13), 0 2px 8px rgba(0, 0, 0, 0.09);
   border: none;
   padding: 24px 20px 20px 20px;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 260px;
-  transition: transform 0.15s, box-shadow 0.15s;
+  width: 270px;
+  min-height: 430px;
+  transition: transform 0.18s, box-shadow 0.18s;
   position: relative;
+  justify-content: flex-start;
+  gap: 14px;
 }
 
 .gift-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.13);
 }
 
 .gift-title {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #2d2d2d;
+  font-weight: 700;
+  font-size: 1.18rem;
+  color: #5b2312;
   text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  letter-spacing: 0.01em;
 }
 
 .gift-price {
-  font-size: 1.1rem;
-  color: #4caf50;
-  font-weight: 500;
-  margin: 10px 0 12px 0;
+  font-size: 1.08rem;
+  color: #5b2312;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  border-radius: 6px;
+  padding: 4px 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  flex: 1;
 }
 
 .gift-card img {
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
   width: 180px;
   height: 180px;
   object-fit: cover;
   background: #f0f0f0;
+  display: block;
+  margin: 0 auto;
 }
 
-.gift-card a {
-  margin-top: 10px;
-  background: #4caf50;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: background 0.15s;
-  box-shadow: 0 1px 4px rgba(76, 175, 80, 0.08);
-}
+/* QR Code Page */
 
-.gift-card a:hover {
-  background: #388e3c;
-}
-
-h1,h2 {
+.qrcode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50vh;
+  gap: 18px;
+  background: #eaa995;
+  color: #5b2312;
+  padding: 2%;
   text-align: center;
-  margin-top: 32px;
-  color: #333;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
+  box-sizing: border-box;
 }
+
+.qrcode-container img {
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  width: 240px;
+  height: 240px;
+  background: #f0f0f0;
+  display: block;
+  margin: 0 auto;
+}
+
+.qrcode-container button {
+  width: 20%;
+}
+
+.qrcode-container p {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em 0;
+  margin: 0;
+  word-break: break-all;
+}
+
+.back-link {
+  display: block;
+  margin: 32px auto 0 auto;
+  text-align: center;
+  background: #eaa995;
+  color: #5b2312;
+  font-size: 1.08rem;
+  font-family: "Quicksand", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  border-radius: 8px;
+  padding: 10px 24px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s,
+    text-decoration 0.18s;
+  box-shadow: 0 1.5px 6px rgba(67, 160, 71, 0.08);
+  width: fit-content;
+}
+
+.back-link:hover {
+  background: #805c51;
+  color: #ffffff;
+}
+
+/* Media Queries */
 
 @media (max-width: 600px) {
-  #gifts {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .gift-card {
-    width: 95vw;
-    min-width: unset;
-    max-width: 99vw;
-    padding: 16px 6px 16px 6px;
-  }
-
-  .gift-card img {
-    width: 90vw;
-    height: auto;
-    max-width: 320px;
-  }
-
-  h1,h2 {
-    font-size: 1.3rem;
+  .qrcode-container button {
+    width: 40%;
   }
 }

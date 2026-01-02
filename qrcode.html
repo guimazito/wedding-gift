@@ -3,24 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <title>QR Code</title>
-    <link rel="stylesheet" type="text/css" href="css/style_qrcode.css" />
+     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1>QR Code do Presente</h1>
-    <div id="qrcode-img"></div>
-    <a href="index.html" class="back-link">Voltar para a lista</a>
+    <div id="qrcode-card"></div>
+    <a href="index.html" class="back-link">Voltar para a Lista</a>
     <script>
       const params = new URLSearchParams(window.location.search);
       const pix = params.get("pix");
       const linkValue = params.get("link");
       if (pix) {
         const container = document.createElement("div");
-        container.style.display = "flex";
-        container.style.alignItems = "center";
-        container.style.justifyContent = "center";
-        container.style.gap = "32px";
+        container.className = "qrcode-container";
 
         const img = document.createElement("img");
         img.src = pix;
@@ -30,26 +31,24 @@
         link.innerText = linkValue || "";
 
         const copyBtn = document.createElement("button");
-        copyBtn.innerText = "Copiar código PIX";
+        copyBtn.innerText = "Copiar Código PIX";
         copyBtn.onclick = function() {
           if (linkValue) {
             navigator.clipboard.writeText(linkValue);
             copyBtn.innerText = "Copiado!";
-            setTimeout(() => { copyBtn.innerText = "Copiar código PIX"; }, 1500);
+            setTimeout(() => { copyBtn.innerText = "Copiar Código PIX"; }, 1500);
           }
         };
 
         container.appendChild(img);
         const linkBtnContainer = document.createElement("div");
-        linkBtnContainer.style.display = "flex";
-        linkBtnContainer.style.flexDirection = "column";
-        linkBtnContainer.style.alignItems = "center";
+        linkBtnContainer.className = "qrcode-info";
         linkBtnContainer.appendChild(link);
         linkBtnContainer.appendChild(copyBtn);
         container.appendChild(linkBtnContainer);
-        document.getElementById("qrcode-img").appendChild(container);
+        document.getElementById("qrcode-card").appendChild(container);
       } else {
-        document.getElementById("qrcode-img").innerText =
+        document.getElementById("qrcode-card").innerText =
           "QR Code não encontrado.";
       }
     </script>

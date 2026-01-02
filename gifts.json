@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Toma aqui os 50 reais",
+    "price": "R$ 50,00",
+    "pix": "images/qrcode50.jpg",
+    "image": "images/imagem50.png",
+    "link": "00020126330014BR.GOV.BCB.PIX011102671789211520400005303986540550.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510F4iPFhrJKo6304F202"
+  },
+  {
+    "name": "Só pra não dizer que não dei nada",
+    "price": "R$ 70,00",
+    "pix": "images/qrcode70.jpg",
+    "image": "images/imagem70.png",
+    "link": "00020126330014BR.GOV.BCB.PIX011102671789211520400005303986540570.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510I9hibT06SQ6304F8E1"
+  },
+  {
+    "name": "Cafezinho no aeroporto (Sabemos que é mais caro)",
+    "price": "R$ 90,00",
+    "pix": "images/qrcode90.png",
+    "image": "images/imagem90.png",
+    "link": "00020126330014BR.GOV.BCB.PIX011102671789211520400005303986540590.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510YOWHE8cMau6304975F"
+  },
+  {
+    "name": "Cueca sexy para a noite de núpcias",
+    "price": "R$ 100,00",
+    "pix": "images/qrcode100.png",
+    "image": "images/imagem100.jpg",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406100.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510BfmrEiBBz7630481D1"
+  },
+  {
+    "name": "Estoque de coquinha gelada para a noiva",
+    "price": "R$ 120,00",
+    "pix": "images/qrcode120.png",
+    "image": "images/imagem120.png",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406120.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510DRJXSkZWJe6304BA93"
+  },
+  {
+    "name": "Cobertor para a noiva estar sempre coberta de razão",
+    "price": "R$ 150,00",
+    "pix": "images/qrcode150.png",
+    "image": "images/imagem150.jpg",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406150.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510151RmmV84l6304155C"
+  },
+  {
+    "name": "Jogo de panelas moderno",
+    "price": "R$ 200,00",
+    "pix": "images/qrcode200.png",
+    "image": "images/imagem200.png",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406200.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510tBrHVcPcGF63045DBD"
+  },
+  {
+    "name": "Vale 1 ano para a noiva não proibir o noivo de jogar futebol",
+    "price": "R$ 250,00",
+    "pix": "images/qrcode250.png",
+    "image": "images/imagem250.png",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406250.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510LCpo13kQ8z6304DD72"
+  },
+  {
+    "name": "Kit calmante para a noiva não se estressar",
+    "price": "R$ 300,00",
+    "pix": "images/qrcode300.png",
+    "image": "images/imagem300.jfif",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406300.005802BR5924Jessica Albano Guimaraes6009SAO PAULO621405101gs3mRHcvx6304CFF7"
+  },
+  {
+    "name": "Curso de culinária para o noivo",
+    "price": "R$ 400,00",
+    "pix": "images/qrcode400.png",
+    "image": "images/imagem400.jpg",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406400.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510a7phGm3S5y6304A935"
+  },
+  {
+    "name": "1º rancho do casal",
+    "price": "R$ 500,00",
+    "pix": "images/qrcode500.png",
+    "image": "images/imagem500.jpg",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406500.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510pQsBtmJKUm63043155"
+  },
+  {
+    "name": "1 ano de corte de cabelo para o noivo",
+    "price": "R$ 600,00",
+    "pix": "images/qrcode600.png",
+    "image": "images/imagem600.png",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406600.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510fJA2IwnJRw63041072"
+  },
+  {
+    "name": "1 mês de faxina para a noiva descansar",
+    "price": "R$ 760,00",
+    "pix": "images/qrcode760.png",
+    "image": "images/imagem760.png",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406760.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510sssHz8sH6w6304BF16"
+  },
+  {
+    "name": "Ajudinha na lua de mel",
+    "price": "R$ 900,00",
+    "pix": "images/qrcode900.png",
+    "image": "images/imagem900.png",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865406900.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510xXtbXIlKaE63041ECD"
+  },
+  {
+    "name": "Ajuda para deixar a Cherekinha na creche durante a lua de mel dos papais",
+    "price": "R$ 1.100,00",
+    "pix": "images/qrcode1100.png",
+    "image": "images/imagem1100.png",
+    "link": "00020126330014BR.GOV.BCB.PIX01110267178921152040000530398654071100.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510K2vReqvfuO63041853"
+  },
+  {
+    "name": "Ajuda na parcela do apartamento",
+    "price": "R$ 1.600,00",
+    "pix": "images/qrcode1600.png",
+    "image": "images/imagem1600.png",
+    "link": "00020126330014BR.GOV.BCB.PIX01110267178921152040000530398654071600.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510pt0JRTPmKw6304581C"
+  },
+  {
+    "name": "Caso Deus toque no seu coração",
+    "price": "R$ 2.000,00",
+    "pix": "images/qrcode2000.png",
+    "image": "images/imagem2000.jpg",
+    "link": "00020126330014BR.GOV.BCB.PIX01110267178921152040000530398654072000.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510u1iM9cIt966304DE00"
+  },
+  {
+    "name": "Dei o melhor presente",
+    "price": "R$ 3.000,00",
+    "pix": "images/qrcode3000.png",
+    "image": "images/imagem3000.jpg",
+    "link": "00020126330014BR.GOV.BCB.PIX01110267178921152040000530398654073000.005802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510DY1ntltMRR63044C13"
+  },
+  {
+    "name": "Ajudar os noivos a quitarem as dívidas",
+    "price": "Pix livre",
+    "pix": "images/qrcodeLivre.png",
+    "image": "images/imagemLivre.png",
+    "link": "00020126330014BR.GOV.BCB.PIX0111026717892115204000053039865802BR5924Jessica Albano Guimaraes6009SAO PAULO62140510VrbodmVZdS6304B675"
+  }
+]

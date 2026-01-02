@@ -6,50 +6,38 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1>Lista de Presentes</h1>
     <h2>Casamento Jéssica e Diego</h2>
     <div id="gifts"></div>
     <script>
-      const gifts = [
-        {
-          name: "Jogo de Facas para Churrasco",
-          price: "R$ 150,00",
-          pix: "images/chave1.png",
-          image: "images/faca.jpg",
-          link: "000201010310001654630014BR.GOV.BCB.PIX0136NOME@EMAIL.COM.BR5204000053039865802BR5901NOME_DO_BENEFICIARIO6001CIDADE62070503***63041111",
-        },
-        {
-          name: "Jogo de Toalhas de Banho Rosa",
-          price: "R$ 200,00",
-          pix: "images/chave2.png",
-          image: "images/toalha.jpg",
-          link: "000201010310001654630014BR.GOV.BCB.PIX0136NOME@EMAIL.COM.BR5204000053039865802BR5901NOME_DO_BENEFICIARIO6001CIDADE62070503***63042222",
-        },
-        {
-          name: "Escorredor de Louça em Inox",
-          price: "R$ 80,00",
-          pix: "images/chave3.png",
-          image: "images/escorredor.png",
-          link: "000201010310001654630014BR.GOV.BCB.PIX0136NOME@EMAIL.COM.BR5204000053039865802BR5901NOME_DO_BENEFICIARIO6001CIDADE62070503***63043333",
-        },
-      ];
-
       const giftsDiv = document.getElementById("gifts");
-      gifts.forEach((gift, idx) => {
-        const card = document.createElement("div");
-        card.className = "gift-card";
-        card.innerHTML = `
-        <div class="gift-title">${gift.name}</div>
-        <img src="${gift.image}" alt="${
-          gift.name
-        }" style="width:200px;height:200px;"><br>
-        <div class="gift-price">${gift.price}</div>
-        <a href="qrcode.html?pix=${encodeURIComponent(gift.pix)}&link=${encodeURIComponent(gift.link)}">Ver QR Code</a>
-        `;
-        giftsDiv.appendChild(card);
-      });
+      fetch("gifts.json")
+        .then(response => {
+          if (!response.ok) throw new Error("Erro ao carregar os presentes");
+          return response.json();
+        })
+        .then(gifts => {
+          gifts.forEach((gift, idx) => {
+            const card = document.createElement("div");
+            card.className = "gift-card";
+            card.innerHTML = `
+              <div class="gift-title">${gift.name}</div>
+              <img src="${gift.image}" alt="${gift.name}" style="width:200px;height:200px;">
+              <div class="gift-price">${gift.price}</div>
+              <a href="qrcode.html?pix=${encodeURIComponent(gift.pix)}&link=${encodeURIComponent(gift.link)}">QR Code</a>
+            `;
+            giftsDiv.appendChild(card);
+          });
+        })
+        .catch(error => {
+          giftsDiv.innerText = "Erro ao carregar a lista de presentes.";
+        });
     </script>
   </body>
 </html>
